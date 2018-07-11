@@ -1,0 +1,80 @@
+<!--<div align="left" class="container">-->
+  
+<!--<form id="mainForm" >  -->
+
+    <div id="container"> 
+        <div id="left">          
+            <cy-graph></cy-graph>
+          <!--<cy-graph></cy-graph>-->
+            
+      </div>
+      
+      <div id="right">
+          <ul>
+              <li *ngFor="let e of elements">
+                  {{e}}
+              </li>
+            </ul>
+        
+          <div class="form-group" id="mainForm">
+
+              <label for="1" >Number of Vertices</label>
+              <input  id="1" class="form-control" [(ngModel)]="params.nOfVertices" id ="nOfVertices" name="something"  placeholder="number of vertices">
+          
+          
+          <div class="form-group">
+              <label>Max Degree</label>
+               <input class="form-control" [(ngModel)]="params.maxDegree" id="maxDegree" name="something2"  placeholder="max degree">     
+          </div> 
+          
+          
+          <div class="form-group" id="sel1">
+            
+              <label for="graphTypeSelect">Graph Type</label>  
+              <select  [(ngModel)]="params.graphType" (ngModelChange)="graphTypeChange()"  class="form-control" id="graphTypeSelect">
+                  <option *ngFor="let type of graphTypes">
+                      {{type}}
+                    </option>      
+              </select>
+          
+            </div>
+          
+            <div class="form-group">
+                <label for="heuristicSelect">Heuristic</label>
+                <select  [(ngModel)]="params.heuristic" class="form-control" id="heuristicSelect">
+                    <option *ngFor="let h of heuristics">
+                        {{h}}
+                      </option>      
+                </select>
+              </div>
+          
+          <div class="form-group">
+          
+          
+          </div>
+            <div class="form-group">
+            <div class="btn-group" role="group" >
+                
+          <!--<button (click)="onGenerate()" type="button" class="btn btn-lg btn-default" [ngModelOptions]="{standalone: true}">Submit</button>-->
+          <button  (click)="onGenerate()" type="button" class="btn btn-lg btn-default">Generate Graph</button>
+          <button (click)="onRunHeuristic()" type="button" class="btn btn-lg btn-default">Run Heuristic</button>
+          
+          </div>
+          <div class="btn-group" role="group" >
+                
+              <!--<button (click)="onGenerate()" type="button" class="btn btn-lg btn-default" [ngModelOptions]="{standalone: true}">Submit</button>-->
+              
+              <button type="button"  [disabled]="!validBFS" (click)="onBFS()" class="btn btn-lg btn-default">BFS</button>
+              <button type="button" [disabled]="!validBFSNext" (click)="onBFSNext()" class="btn btn-lg btn-default">BFS-Next</button>
+              </div>
+          </div>
+          </div>
+        
+        
+      </div>
+    </div>
+
+  
+<!--</form>-->
+
+<!--</div>-->

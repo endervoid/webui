@@ -1,0 +1,42 @@
+#mainForm {    
+    float:left;
+    padding-left: 10px;    
+    width:70%;   
+    
+}
+
+#left {
+    
+    float:left;
+    height:500px; 
+    width:70%;  
+    background-color: brown;
+   /* border: black; 
+    border-style: solid;  
+    box-shadow: 5px 7px 7px;*/
+   /* box-shadow: 0.3em 0.3em 0.9em black; ;*/
+}
+#right {
+  
+  float:right;
+  height:100%;
+  width:30%;
+  
+  }
+
+
+label {
+    
+    /*font-style: normal;
+    font-variant: none;
+    font-family: sans-serif;
+    font-weight: normal;
+    opacity: 1;
+    color :text*/
+}
+
+/*form {
+    max-width: 330px;
+    align:left;
+
+}*/
